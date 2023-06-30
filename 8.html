@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard | UBold - Responsive Admin Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico"><!-- Plugins css -->
+    <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/libs/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet"
+        type="text/css" />
+
+
+
+    <!-- third party css -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/libs/datatables.net-select-bs4/css//select.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- third party css end -->
+
+    <!-- Responsive Table css -->
+    <link href="assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Sweet Alert-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <!-- App css -->
+    <link href="assets/css/bootstrap-material.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="assets/css/app-material.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+    <!-- icons -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .navbar-custom {
+            background-color: #fff!important;
+        }
+        .search-condition .icon-dual {
+            color: #fff !important;
+        }
+        .result-table .icon-dual {
+            color: #25b7d8 !important;
+        }
+        td .modal {
+            white-space: normal !important;
+        }
+
+    </style>
+</head>
+
+<body
+    data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-dark text-center">                        
+                        
+                    </a>
+                    <a href="index.html" class="logo logo-light text-center">                        
+                        
+                    </a>
+                </div>
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li><button class="button-menu-mobile waves-effect waves-light"><i class="fe-menu"></i></button>
+                    </li>
+                    <li>
+                        <!-- Mobile menu toggle(Horizontal Layout)--><a class="navbar-toggle nav-link"
+                            data-toggle="collapse" data-target="#topnav-menu-content">
+                            <div class="lines"><span></span><span></span><span></span></div>
+                        </a><!-- End mobile menu toggle-->
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div><!-- end Topbar -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+            <div class="h-100" data-simplebar>
+                <!-- User box -->
+                <div class="user-box text-center"><img src="assets/images/users/user-1.jpg" alt="user-img"
+                        title="Mat Helme" class="rounded-circle avatar-md">
+                    <div class="dropdown"><a href="javascript: void(0);"
+                            class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">Geneva
+                            Kennedy</a>
+                        <div class="dropdown-menu user-pro-dropdown">
+                            <!-- item--><a href="javascript:void(0);" class="dropdown-item notify-item"><i
+                                    class="fe-user mr-1"></i><span>My Account</span></a><!-- item--><a
+                                href="javascript:void(0);" class="dropdown-item notify-item"><i
+                                    class="fe-settings mr-1"></i><span>Settings</span></a><!-- item--><a
+                                href="javascript:void(0);" class="dropdown-item notify-item"><i
+                                    class="fe-lock mr-1"></i><span>Lock Screen</span></a><!-- item--><a
+                                href="javascript:void(0);" class="dropdown-item notify-item"><i
+                                    class="fe-log-out mr-1"></i><span>Logout</span></a></div>
+                    </div>
+                    <p class="text-muted">Admin Head</p>
+                </div>
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <ul id="side-menu">
+                        <li><a href="#manager" data-toggle="collapse">
+                                <i class="mdi mdi-account-circle-outline"></i><span>權限管理 </span><span
+                                    class="menu-arrow"></span></a>
+                            <div class="collapse" id="manager">
+                                <ul class="nav-second-level">
+                                    <li><a href="javascript:;">名單</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#ga" data-toggle="collapse">
+                                <i class="mdi mdi-view-dashboard-outline"></i><span>數據統計 </span><span
+                                    class="menu-arrow"></span></a>
+                            <div class="collapse" id="ga">
+                                <ul class="nav-second-level">
+                                    <li><a href="javascript:;">四合一</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#member" data-toggle="collapse"><i
+                                    class="mdi mdi-account-multiple-outline"></i><span>會員相關 </span><span
+                                    class="menu-arrow"></span></a>
+                            <div class="collapse" id="member">
+                                <ul class="nav-second-level">
+                                    <li><a href="1.html">會員明細查詢</a></li>
+                                    <li><a href="3.html">不通過管理狀態</a></li>
+                                    <li><a href="8.html">QA管理</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div><!-- End Sidebar -->
+                <div class="clearfix"></div>
+            </div><!-- Sidebar -left -->
+        </div><!-- Left Sidebar End -->
+
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page" id="app">
+            <div class="content">
+                <!-- Start Content-->
+                <div class="container-fluid">                    
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">首頁</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">會員相關</a></li>
+                                        <li class="breadcrumb-item active">分享者管理</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">分享者管理</h4>
+                            </div>
+                        </div>
+                    </div><!-- end page title -->
+                    <div class="row search-condition">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">搜尋條件</h4>
+                                    <p class="sub-header"></p>
+                                    <div class="row">
+                                        <div class="col-xl-1">
+                                            <label for="example-select">前台顯示狀態</label>
+                                            <div class="form-group">                                                
+                                                <input type="checkbox" checked data-plugin="switchery" data-color="#3db9dc" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label for="example-select">發問日期</label>
+                                                <div class="input-daterange input-group" data-date-format="mm/dd/yyyy"
+                                                    data-week-start="1" data-autoclose="true"
+                                                    data-today-highlight="true">
+                                                    <input type="date" class="form-control" id="example-daterange-a1"
+                                                        name="example-daterangea1" placeholder="開始日期"
+                                                        data-week-start="1" data-autoclose="true"
+                                                        data-today-highlight="true">
+                                                    <div class="input-group-prepend input-group-append">
+                                                        <span class="input-group-text font-w600">
+                                                            <i class="fa fa-fw fa-arrow-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="date" class="form-control" id="example-daterange-a2"
+                                                        name="example-daterange-a2" placeholder="結束日期"
+                                                        data-week-start="1" data-autoclose="true"
+                                                        data-today-highlight="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-5">
+                                            <div class="form-group">
+                                                <label for="simpleinput">關鍵字</label>
+                                                <input type="text" id="simpleinput" class="form-control"
+                                                    placeholder="請輸入廠編或公司名稱">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 text-right align-self-center">
+                                            <button type="button"
+                                                class="mr-2 btn btn-info btn-rounded waves-effect waves-light">
+                                                <div class="icon-item">
+                                                    <i data-feather="search" class="icon-dual"></i>
+                                                    <span>搜尋</span>
+                                                </div>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-pink btn-rounded waves-effect waves-light">
+                                                <div class="icon-item">
+                                                    <i data-feather="refresh-cw" class="icon-dual"></i>
+                                                    <span>清除條件</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                    <div class="row result-table">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">搜尋資料總量</h4>
+                                    <p class="text-muted font-13 mb-4">15筆</p>
+                                    <table id="scroll-horizontal-datatable" class="table w-100 nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>履編</th>
+                                                <th>暱稱</th>
+                                                <th>截圖</th>
+                                                <th>參加時間</th>
+                                                <th>是否顯示前台</th>
+                                                <th>審核人員</th>
+                                                <th>審核時間</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <a href="#">53521877</a>
+                                                </td>
+                                                <td>王曉明</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#info-alert-modal">查看</button>                                                   
+                                                </td>
+                                                <td>2021/5/27 下午 10:04:52</td>
+                                                <td>X</td>
+                                                <td>20200923</td>
+                                                <td>2021/5/28 上午 09:49:41</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    <a href="#">53521876</a>
+                                                </td>
+                                                <td>方泓閔</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#info-alert-modal">查看</button>                                                    
+                                                </td>
+                                                <td>2021/5/26 下午 10:04:52</td>
+                                                <td>V</td>
+                                                <td>20200923</td>
+                                                <td>2021/5/27 上午 09:49:41</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- end card body-->
+                            </div><!-- end card -->
+                        </div><!-- end col-->
+                    </div><!-- end row-->
+                </div><!-- container -->
+            </div><!-- content -->            
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+        
+
+    </div>
+    <!-- END wrapper -->
+    <!-- Info Alert Modal -->
+    <div id="info-alert-modal" class="modal fade" tabindex="-1" role="dialog"
+    aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <div class="text-center">
+                        <p class="mt-3">
+                            <img class="img-fluid" src="assets/images/products/product-1.png" alt="">
+                        </p>
+                        <button type="button" class="btn btn-info my-2" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+    <!-- Plugins js-->
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
+
+    <script src="assets/libs/mohithg-switchery/switchery.min.js"></script>
+    <script src="assets/libs/multiselect/js/jquery.multi-select.js"></script>
+    <script src="assets/libs/select2/js/select2.min.js"></script>
+    <script src="assets/libs/jquery-mockjax/jquery.mockjax.min.js"></script>
+    <script src="assets/libs/devbridge-autocomplete/jquery.autocomplete.min.js"></script>
+    <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <!-- Init js-->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
+    <script src="assets/libs/parsleyjs/parsley.min.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweet-alerts.init.js"></script>
+
+    <script src="assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
+    <script src="assets/libs/autonumeric/autoNumeric-min.js"></script>
+    <!-- Init js-->
+    <script src="assets/js/pages/form-masks.init.js"></script>
+
+
+    <!-- Summernote js -->
+    <script src="assets/libs/summernote/summernote-bs4.min.js"></script>
+    <!-- Init js -->
+    <script src="assets/js/pages/form-summernote.init.js"></script>
+
+
+    <!-- third party js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <!-- third party js ends -->
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+
+    <!-- Responsive Table js -->
+    <script src="assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
+    <!-- Init js -->
+    <script src="assets/js/pages/responsive-table.init.js"></script>
+
+    <!-- Footable js -->
+    <script src="assets/libs/footable/footable.all.min.js"></script>
+    <!-- Init js -->
+    <script src="assets/js/pages/foo-tables.init.js"></script>
+
+
+    <!-- App js-->
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- Vue.js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                totalTxt1: 0,
+                totalTxt2: 0
+            },
+            created: function () {
+
+            },
+            methods: {
+                edit: function (status_step,sid) {
+
+                    $('.edit-block').slideDown();
+                    
+                    switch (status_step) {
+
+                        case 1 :
+                            $('.status1_input').fadeIn();
+                            $('.status2_input:not(.status1_input)').fadeOut();
+                            break;
+                        case 2 :
+                            $('.status2_input').fadeIn();
+                            $('.status1_input:not(.status2_input)').fadeOut();
+                            break;
+                        default:
+                            break;
+
+                    }
+                   
+                },
+                search: function () {
+                    console.log('search!')
+                },
+                clear: function () {
+                    console.log('clear!')
+                },
+                cancel: function () {
+
+                    $('.edit-block').slideUp()
+                    $('.status1_input').fadeOut()
+                    $('.status2_input').fadeOut()
+
+                },
+                statusChange: function (status_step,pass_status) {
+
+                    if (status_step == 1 && pass_status == 1) {
+                        console.log('一審不通過')
+                        // $('input[name="test1"]').val(1)
+                        $('.false1-show').fadeIn()                
+                        $('input[name="false2"]').prop('checked', false); 
+                    } else if (status_step == 1 && pass_status == 2) {
+                        console.log('一審通過')
+                        $('.false1-show').fadeOut()      
+                        // $('input[name="test1"]').val(2)          
+                        // $('input[name="false1"]').val(''); 
+                        $('input[name="false1"]').prop('checked', false);
+                        $('input[name="false2"]').prop('checked', false);                
+                    } else if (status_step == 2 && pass_status == 1) {
+                        console.log('二審不通過')
+                        // $('input[name="audit2"]').val(1)
+                        $('.false2-show').fadeIn()
+                        $('input[name="false1"]').prop('checked', false); 
+                    } else {
+                        console.log('二審通過')
+                        // $('input[name="audit2"]').val(2)
+                        $('.false2-show').fadeOut()
+                        // $('input[name="false2"]').val('');
+                        $('input[name="false1"]').prop('checked', false); 
+                        $('input[name="false2"]').prop('checked', false); 
+                    }
+
+                },
+                sendInterview: function() {
+
+                },
+                editWithMail: function() {
+
+                },
+                editWithoutMail: function() {
+                    
+                }
+
+                
+
+            }
+        })
+    </script>
+</body>
+
+</html>
